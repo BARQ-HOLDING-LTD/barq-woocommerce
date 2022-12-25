@@ -1,0 +1,125 @@
+/* 01. Floating message */
+.barq-floating-message {
+	display: none;
+	position: fixed;
+	max-width: 50%;
+	top: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 12px 60px 12px 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	z-index: 1000;
+}
+.barq-floating-message.success {
+	color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.barq-floating-message.failed {
+	color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.barq-floating-message-close {
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 5px;
+    top: 5px;
+	background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 330 330' style='enable-background:new 0 0 330 330;' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23155724' d='M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165c90.982,0,165-74.019,165-165S255.982,0,165,0z M165,300 c-74.439,0-135-60.561-135-135S90.561,30,165,30c74.439,0,135,60.561,135,135S239.439,300,165,300z'/%3E %3Cpath fill='%23155724' d='M239.247,90.754c-5.857-5.858-15.355-5.858-21.213,0l-53.033,53.033l-53.033-53.033c-5.857-5.858-15.355-5.858-21.213,0 c-5.858,5.858-5.858,15.355,0,21.213L143.788,165l-53.033,53.033c-5.858,5.858-5.858,15.355,0,21.213 c2.929,2.929,6.768,4.394,10.606,4.394c3.839,0,7.678-1.464,10.606-4.394l53.033-53.033l53.033,53.033 c2.929,2.929,6.768,4.394,10.606,4.394c3.839,0,7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L186.214,165 l53.033-53.033C245.105,106.109,245.105,96.612,239.247,90.754z'/%3E %3C/g%3E %3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 15px;
+	background-position: center;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+.barq-floating-message.failed .barq-floating-message-close {
+	background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 330 330' style='enable-background:new 0 0 330 330;' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23721c24' d='M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165c90.982,0,165-74.019,165-165S255.982,0,165,0z M165,300 c-74.439,0-135-60.561-135-135S90.561,30,165,30c74.439,0,135,60.561,135,135S239.439,300,165,300z'/%3E %3Cpath fill='%23721c24' d='M239.247,90.754c-5.857-5.858-15.355-5.858-21.213,0l-53.033,53.033l-53.033-53.033c-5.857-5.858-15.355-5.858-21.213,0 c-5.858,5.858-5.858,15.355,0,21.213L143.788,165l-53.033,53.033c-5.858,5.858-5.858,15.355,0,21.213 c2.929,2.929,6.768,4.394,10.606,4.394c3.839,0,7.678-1.464,10.606-4.394l53.033-53.033l53.033,53.033 c2.929,2.929,6.768,4.394,10.606,4.394c3.839,0,7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L186.214,165 l53.033-53.033C245.105,106.109,245.105,96.612,239.247,90.754z'/%3E %3C/g%3E %3C/svg%3E");
+}
+.barq-floating-message-close:hover {
+	opacity: 1;
+}
+/* 02. Options page */
+.form-table .barq-disabled-button {
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+.form-table .barq-button:focus {
+	box-shadow: none;
+}
+.form-table .barq-button + .spinner {
+	float: none;
+}
+.barq-options-input {
+	width: 300px;
+}
+span.barq-options-input {
+	display: inline-block;
+	padding: 0 8px;
+    line-height: 2;
+    min-height: 28px;
+	border-radius: 4px;
+    border: 1px solid rgba(138,142,147,0.60);
+    background-color: rgba(255,255,255,.5);
+    color: rgb(44,51,56,0.90);
+	min-width: 50%;
+}
+.barq-alert {
+    display: inline-block;
+	position: relative;
+    padding: 1rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    margin: -15px 0;
+}
+.barq-alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+.barq-alert-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+/* 03. Order meta box */
+.barq-order-information-row {
+	display: flex;
+	border-bottom: 1px solid #DDD;
+	padding: 7px 0;
+	margin-bottom: 7px;
+}
+.barq-order-information-row:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.barq-order-information-label {
+	font-weight: 600;
+	width: 15%;
+    min-width: 195px;
+}
+.barq-order-information-value .barq-order-information-label {
+	width: 7%;
+	min-width: 105px;
+}
+.barq-order-information-value .barq-order-information-row {
+	padding-left: 15px;
+    padding-right: 30px;
+    margin-left: -15px;
+}
+.barq-order-information-value .barq-order-information-row:first-child {
+	padding-top: 0;
+    margin-bottom: 0;
+}
+.barq-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
